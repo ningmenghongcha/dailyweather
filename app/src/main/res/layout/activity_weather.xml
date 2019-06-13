@@ -4,12 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
+
     <ImageView
         android:id="@+id/bing_pic_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         />
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawer_layout">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
     <ScrollView
         android:id="@+id/weather_layout"
         android:layout_width="match_parent"
@@ -35,5 +46,13 @@
         </LinearLayout>
 
     </ScrollView>
-
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <fragment
+        android:id="@+id/choose_area_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.dailyweather.android.ChooseAreaFragment"
+        android:layout_gravity="start">
+    </fragment>
+    </android.support.v4.widget.DrawerLayout>
 </FrameLayout>
